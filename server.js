@@ -1,4 +1,4 @@
-var sys = require('sys')
+var sys = require('util')
 var exec = require('child_process').exec;
 require('joose'); require('joosex-namespace-depended'); require('hash');
 
@@ -9,7 +9,6 @@ mysql = new Mysql();
 
 mysql.user = 'mystalia';
 mysql.password = 'mystalia777';
-mysql.connect();
 mysql.query('USE mmorpg');
 
 // Set the server vars below.

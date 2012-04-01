@@ -2,9 +2,7 @@ var TileSetSize = Array(224,12296);
 
 var serverbusy = false;
 // Create SocketIO instance, connect
-var socket = new io.Socket('mystalia.org',{
-  port: 8080
-});
+var socket = io.connect('http://localhost:8080');
 
 // Add a connect listener
 socket.on('connect',function() {

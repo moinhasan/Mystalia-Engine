@@ -162,7 +162,7 @@ function HandleClientData(data,clientid){
 }
 
 function SendData(client,data){
-	try{ socket.clients[client].send(data); }catch(err){ }
+	try{ socket.sockets.sockets[client].emit('message', data); }catch(err){ console.log(err); }
 }
 
 /* PLAYER AND ACCOUNT FUNCTIONS */

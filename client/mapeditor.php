@@ -43,7 +43,7 @@
 						<input id="ActiveLayer" type="radio" name="ActiveLayer" value="animated"> Animated<br /><br />
 						
 						<center>
-							<table><tr><td><input type="text" id="CustomMapNumber" /></td><td><input type="button" value="Go To" onclick="Map1.Load($('#CustomMapNumber').val());" /></td></tr>
+							<table><tr><td><input type="text" id="CustomMapNumber" /></td><td><input type="button" value="Go To" onclick="MapLoad($('#CustomMapNumber').val());" /></td></tr>
 							<tr><td><select id="MapList" name="MapList"></select></td><td><input type="button" value="Go To" onclick="ChangeMap($('#MapList').val());$('body').animate({ scrollTop: 0 }, 'slow');" /></td></tr></table>
 							<table>
 								<tr><td></td><td align="center"><input type="button" value="N" onclick="LoadNextMap('up')" /><br /><input size="2" type="text" id="northmapid" /></td><td></td></tr>
@@ -80,7 +80,7 @@
 				</div>
 			</div><br />
 		</div>
-		<div style="background-color:#000;width:640px;height:480px"><div id="map" oncontextmenu="return false;" style="width:640px;height:480px"></div></div><br />
+		<div id="mapcontainer" style="background-color:#000;width:640px;height:480px"><div id="map" oncontextmenu="return false;" style="width:640px;height:480px"></div></div><br />
 		<input style="width:640px" type="text" id="playerinput" onkeypress="SendPlayerInput(this, event)"/><br />
 		<div id="playeroutput" style="padding:10px;height:150px;overflow:auto"></div>
 </div>

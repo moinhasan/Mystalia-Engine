@@ -23,7 +23,6 @@ function DoLogout(){
 $(window).load(function(){
 	$('#menuobject-help').hide();
 	$('#loading-form-status').html('Welcome To '+domain+'<br /><ul><li>Loading Data... Loaded</li><li>Connecting to server...</li></ul>');
-	socket.connect();
 	startBlink();
 	setTimeout(function(){
 	if(clientconnected == false){

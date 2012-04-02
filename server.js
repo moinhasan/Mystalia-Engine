@@ -564,7 +564,7 @@ function TilePositionToNumber(x,y){
 }
 
 function CreateMap(mapid,playerloc,clientid){
-	mysql.query("insert into map (id,title,floor,mask,mask2,fringe,fringe2,animated,music,navigate) values ("+mapid+",'New Map "+mapid+"','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0','1',1,'0-0-0-0')",function(){
+	mysql.query("insert into map (id,title,floor,mask,mask2,fringe,fringe2,animated,music,navigate) values ("+mapid+",'New Map "+mapid+"','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0','0x0=0x0',1,'0-0-0-0')",function(){
 		console.log('Created Map '+mapid);
 		PlayerChangeMap(playerloc+':'+mapid,clientid);
 	});
